@@ -1,0 +1,21 @@
+{
+  "name": "json-server-api",
+  "version": "1.0.0",
+  "description": "Simple Fake API",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "recipe-dk": "json-server --watch ./dbDK.json --port 8000",
+    "recipe-en": "json-server --watch ./dbEN.json --port 8000",
+    "start-slow": "json-server --watch ./dbForSlowDemo.json --port 8000 --middlewares ./delay.js"
+  },
+  "author": "ME:)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.2",
+    "typescript": "^5.3.3",
+    "yargs": "^17.7.2"
+  }
+}

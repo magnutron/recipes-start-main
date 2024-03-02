@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Max Power",
+      "email": "max.power@email.com",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Ella Vator",
+      "email": "ella.vator@email.com",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "Al Beback",
+      "email": "al.beback@email.com",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Paige Turner",
+      "email": "p.turner@email.com",
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "name": "Justin Time",
+      "email": "j.time@email.com",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Anita Bath",
+      "email": "a.bath@email.com",
+      "isActive": false
+    },
+    {
+      "id": 7,
+      "name": "Sue Flay",
+      "email": "sue.flay@email.com",
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "name": "Barry Cade",
+      "email": "b.cade@email.com",
+      "isActive": false
+    },
+    {
+      "id": 9,
+      "name": "Gail Forcewind",
+      "email": "g.forcewind@email.com",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "name": "Hal Jalikeeno",
+      "email": "h.jalikeeno@email.com",
+      "isActive": false
+    },
+    {
+      "id": 11,
+      "name": "Les Ismore",
+      "email": "les.ismore@email.com",
+      "isActive": true
+    },
+    {
+      "id": 12,
+      "name": "Moe Lester",
+      "email": "m.lester@email.com",
+      "isActive": false
+    },
+    {
+      "id": 13,
+      "name": "Sal Monella",
+      "email": "sal.monella@email.com",
+      "isActive": true
+    },
+    {
+      "id": 14,
+      "name": "Cara Van",
+      "email": "cara.van@email.com",
+      "isActive": false
+    },
+    {
+      "id": 15,
+      "name": "Pete Sake Jr",
+      "email": "p.sake@email.com",
+      "isActive": false
+    }
+  ]
+}
