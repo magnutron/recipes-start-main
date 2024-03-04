@@ -1,19 +1,20 @@
 import { useState } from "react";
-//import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useAuth } from "./AuthProvider";
 import { User } from "../services/authFacade";
+import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
   const [user, setUser] = useState({ username: "", password: "" });
 
-  //const navigate = useNavigate();
-  //const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const auth = useAuth();
 
   const [err, setErr] = useState(null);
 
-  //const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || "/";
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

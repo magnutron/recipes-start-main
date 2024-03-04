@@ -10,6 +10,7 @@ import Layout from "./Layout";
 import Home from "./Home";
 import Contact from "./Contact";
 import "./App.css";
+import RequireAuth from "./security/RequireAuth";
 
 export default function App() {
   //const auth = useAuth();
@@ -22,7 +23,14 @@ export default function App() {
           <Route path="test" element={<h1>Test</h1>} />
           <Route path=":id" element={<Recipe />} />
         </Route>
-        <Route path="/add" element={<RecipeForm />} />
+        <Route
+          path="/add"
+          element={
+            <RequireAuth roles={["ADMIN"]}>
+              <RecipeForm />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/logout" element={<Logout />} />
