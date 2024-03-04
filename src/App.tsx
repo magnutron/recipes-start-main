@@ -5,7 +5,7 @@ import Recipe from "./recipes/Recipe";
 import RecipesLayout from "./recipes/RecipesLayout";
 import RecipeForm from "./recipes/RecipeForm";
 import Login from "./security/Login";
-//import Logout from "./security/_Logout";
+import Logout from "./security/Logout";
 import Layout from "./Layout";
 import Home from "./Home";
 import Contact from "./Contact";
@@ -25,6 +25,7 @@ export default function App() {
         <Route path="/add" element={<RecipeForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/logout" element={<Logout />} />
         <Route
           path="*"
           element={

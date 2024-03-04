@@ -1,6 +1,6 @@
 import { useState } from "react";
 //import { useLocation } from "react-router-dom";
-//import { useAuth } from "./_Authprovider";
+import { useAuth } from "./AuthProvider";
 import { User } from "../services/authFacade";
 import "./login.css";
 
@@ -9,7 +9,7 @@ const Login = () => {
 
   //const navigate = useNavigate();
   //const location = useLocation();
-  //const auth = useAuth();
+  const auth = useAuth();
 
   const [err, setErr] = useState(null);
 
@@ -25,14 +25,14 @@ const Login = () => {
     console.log(err);
     alert("Login: " + JSON.stringify(user));
     return;
-    // auth
-    //   .signIn(user)
-    //   .then(() => {
-    //     navigate(from, { replace: true });
-    //   })
-    //   .catch((err) => {
-    //     setErr(err);
-    //   });
+    auth
+      .signIn(user)
+      .then(() => {
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        setErr(err);
+      });
   }
 
   return (
@@ -41,23 +41,11 @@ const Login = () => {
         <h2>Login</h2>
         <div className="login-form-group">
           <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            value={user.username}
-            onChange={(e) => setUser((prev) => ({ ...prev, username: e.target.value }))}
-            required
-          />
+          <input type="text" name="username" value={user.username} onChange={(e) => setUser((prev) => ({ ...prev, username: e.target.value }))} required />
         </div>
         <div className="login-form-group">
           <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={user.password}
-            onChange={(e) => setUser((prev) => ({ ...prev, password: e.target.value }))}
-            required
-          />
+          <input type="password" name="password" value={user.password} onChange={(e) => setUser((prev) => ({ ...prev, password: e.target.value }))} required />
         </div>
         <button type="submit" className="login-btn">
           Login
